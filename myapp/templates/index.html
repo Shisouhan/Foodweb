@@ -1,0 +1,45 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}
+    หน้าแรก
+{% endblock %}
+
+{% block content %}
+    <style>
+        .header {
+            font-size: 21px;
+        }
+    </style>
+
+    <div class="header">
+        <p class="font-promp underline text-center py-3">อาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี</p>
+    </div>
+    
+    <div class="foodlist flex items-start justify-center pt-5">
+        <div id="food" class="food-1 w-80 text-center mx-4 p-2">
+            <img src="{% static 'card-01.jpg' %}" class="rounded-full block mx-auto mb-3">
+            <h1 class="font-mitr text-2xl font-light">เมี่ยงคำกลีบบัวหลวงแบบโบราณ</h1>
+            <p class="font-sarabun text-sm leading-6 pt-4 pb-5 text-gray-600">
+                มีคุณค่าทางสมุนไพรสูง เพราะมีคุณสมบัติในการบำรุงรักษาธาตุทั้ง 4 เพื่อให้สมดุลกัน กลีบบัวหลวง มีสีสันสวยงาม มีสรรพคุณบำรุงร่างกาย ห้ามเลือด มีเส้นใยอาหารสูง และกระตุ้นการขับถ่ายเป็นยาสมานแผล ช่วยบำรุงร่างกายบำรุงหัวใจ ลดความดันโลหิตสูง และลดระดับน้ำตาลในเลือดได้
+            </p>
+            <a href="{% url 'food1' %}" class="font-sarabun bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-md">เรียนรู้เพิ่มเติม &gt;&gt;</a>
+        </div>
+        <div id="food" class="food-2 w-80 text-center mx-4 p-2">
+            <img src="{% static 'card-02.jpg' %}" class="rounded-full block mx-auto mb-3">
+            <h1 class="font-mitr text-2xl font-light">ปลาส้มทรงเครื่องสมุนไพร</h1>
+            <p class="font-sarabun text-sm leading-6 pt-4 pb-5 text-gray-600">
+                มีคุณค่าทางสมุนไพรสูง เพราะมีคุณสมบัติในการบำรุงรักษาธาตุทั้ง 4 เพื่อให้สมดุลกัน กลีบบัวหลวง มีสีสันสวยงาม มีสรรพคุณบำรุงร่างกาย ห้ามเลือด มีเส้นใยอาหารสูง และกระตุ้นการขับถ่ายเป็นยาสมานแผล ช่วยบำรุงร่างกายบำรุงหัวใจ ลดความดันโลหิตสูง และลดระดับน้ำตาลในเลือดได้
+            </p>
+            <a href="{% url 'food2' %}" class="font-sarabun bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-md">เรียนรู้เพิ่มเติม &gt;&gt;</a>
+        </div>
+        <div id="food" class="food-3 w-80 text-center mx-4 p-2">
+            <img src="{% static 'card-03.jpg' %}" class="rounded-full block mx-auto mb-3">
+            <h1 class="font-mitr text-2xl font-light">หมี่กะทิ</h1>
+            <p class="font-sarabun text-sm leading-6 pt-4 pb-5 text-gray-600">
+                มีคุณค่าทางสมุนไพรสูง เพราะมีคุณสมบัติในการบำรุงรักษาธาตุทั้ง 4 เพื่อให้สมดุลกัน กลีบบัวหลวง มีสีสันสวยงาม มีสรรพคุณบำรุงร่างกาย ห้ามเลือด มีเส้นใยอาหารสูง และกระตุ้นการขับถ่ายเป็นยาสมานแผล ช่วยบำรุงร่างกายบำรุงหัวใจ ลดความดันโลหิตสูง และลดระดับน้ำตาลในเลือดได้
+            </p>
+            <a href="{% url 'food3' %}" class="font-sarabun bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-md">เรียนรู้เพิ่มเติม &gt;&gt;</a>
+        </div>
+    </div>
+{% endblock %}

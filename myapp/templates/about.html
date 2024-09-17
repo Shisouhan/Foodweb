@@ -1,0 +1,27 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}
+    ผู้จัดทำ
+{% endblock %}
+
+{% block content %}
+    <div class="author w-96 border-2 border-black block mx-auto mt-5">
+        <img src="{% static 'author.jpg' %}" alt="">
+        <div class="px-4 pt-2">
+            <h1 class="font-mitr text-3xl font-light my-3">นายธาดา สาเกตุ</h1>
+            <p class="font-sarabun leading-8">
+                นักศึกษาสาขาเทคโนโลยีสารสนเทศและการสื่อสาร คณะวิทยาศาสตร์ มหาวิทยาลัยอุบลราชธานี ชื่อนชอบในเทคโนโลยีและคอมพิวเตอร์
+                ดนตรี การฟังเพลง เวลาว่างนอน เล่นเกมหรือเล่นดนตรี
+            </p>
+            <div class="flex justify-left my-3">
+                <p class="font-sarabun px-2 py-1 bg-blue-300 rounded-xl">Python 🤣</p>
+                <p class="font-sarabun px-2 py-1 bg-amber-300 rounded-xl mx-3">HTML 👌</p>
+                <p class="font-sarabun px-2 py-1 bg-yellow-300 rounded-xl">Javascript 😊</p>
+            </div>
+            <div class="inline-block mb-8">
+                <p class="font-sarabun px-2 py-1 bg-green-300 rounded-xl">Django Framework💀</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% load compress %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+    
+    <nav class="bg-amber-500">
+        <div class="mx-auto mx-3">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="flex flex-1 items-center justify-left pl-1">
+              <div class="flex flex-shrink-0 items-center pl-3">
+                <a href="{% url 'index' %}"><img class="h-8 w-auto" src="{% static 'logo.png' %}"></a>
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <a href="{% url 'index' %}" class="rounded-md px-3 py-2 text-sm font-medium text-white">หน้าแรก</a>
+                  <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white">ตารางเทียบแคลเลอรี</a>
+                  <a href="{% url 'about' %}" class="rounded-md px-3 py-2 text-sm font-medium text-white">ผู้จัดทำ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
